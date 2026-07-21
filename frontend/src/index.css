@@ -9,6 +9,10 @@ a.active hr{
     font-family: Outfit;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .prata-regular {
   font-family: "Prata", serif;
   font-weight: 400;
@@ -17,6 +21,19 @@ a.active hr{
 
 ::-webkit-scrollbar{
     display: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #414141;
+}
+
+button {
+    transition: opacity 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.9;
 }
 
 @media (max-width:640px){

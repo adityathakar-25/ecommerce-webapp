@@ -6,7 +6,7 @@ A full-stack e-commerce web application.
 
 - **Frontend:** React, Vite, Tailwind CSS, React Router
 - **Backend:** Node.js, Express, MongoDB, Cloudinary
-- **Payments:** Stripe, Razorpay
+- **Payments:** Stripe
 
 ## Status
 

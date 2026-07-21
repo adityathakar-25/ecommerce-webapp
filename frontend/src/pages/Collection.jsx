@@ -69,7 +69,7 @@ const Collection = () => {
 
   useEffect(()=>{
     applyFilter();
-  },[category, subCategory, search, showSearch])
+  },[category, subCategory, search, showSearch, products])
 
   useEffect(()=>{
     sortProduct();
@@ -84,7 +84,7 @@ const Collection = () => {
           <img className={`h-3 sm:hidden ${showFilter ? 'rotate-90': ''}`} src={assets.dropdown_icon} alt=""/>
         </p>
         {/* Category filter*/}
-        <div className={`border border-gray-300 pl-5 py-3 mt-6 ${showFilter ? '' : 'hidden'} sm:block`}>
+        <div className={`border border-gray-300 pl-5 py-3 mt-6 rounded ${showFilter ? '' : 'hidden'} sm:block`}>
           <p className='mb-3 text-sm font-medium'>CATEGORIES</p>
           <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
             <p className='flex gap-2'>
@@ -101,7 +101,7 @@ const Collection = () => {
 
         {/* SubCategory Filter */}
 
-        <div className={`border border-gray-300 pl-5 py-3 mt-6 my-5 ${showFilter ? '' : 'hidden'} sm:block`}>
+        <div className={`border border-gray-300 pl-5 py-3 mt-6 my-5 rounded ${showFilter ? '' : 'hidden'} sm:block`}>
           <p className='mb-3 text-sm font-medium'>Type</p>
           <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
             <p className='flex gap-2'>
@@ -123,7 +123,7 @@ const Collection = () => {
         <div className='flex justify-between text-base sm:text-2xl mb-4'>
           <Title text1={'ALL'} text2={'COLLECTIONS'} />
           {/* Product Sort */}
-          <select onChange={(e)=>setSortType(e.target.value)} className='"border-2 border-gray-300 text-sm px-2'>
+          <select onChange={(e)=>setSortType(e.target.value)} className='border-2 border-gray-300 text-sm px-2 rounded'>
             <option value='relavent'>Sort by: Relevant</option>
             <option value='low-high'>Sort by: Low to High</option>
             <option value='high-low'>Sort by: High to Low</option>
